@@ -5,6 +5,7 @@ try:
     from colorama import Fore, init
 except (ModuleNotFoundError):
     os.system('pip install requests colorama')
+    os.system('pip3 install requests colorama')
 
 from colorama import Fore, init
 init(convert=True)
