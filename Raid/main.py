@@ -5,6 +5,7 @@ try:
     from colorama import Fore, init
 except (ModuleNotFoundError):
     os.system('pip install requests colorama ctypes')
+    os.system('pip3 install requests colorama ctypes')
 
 init(convert=True)
 class Client:
